@@ -2,6 +2,19 @@ body {
   padding: 0;
   margin: 0;
   background-color: #ecece7;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.content__title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.content__title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 header {
@@ -29,13 +42,13 @@ header {
   margin-left: 2.55vw;
 }
 
-.link-home {
+.link-fff {
   font-size: 1.2vw;
   color: #fff; 
   letter-spacing: .1em;
 }
 
-.link-other {
+.link-gold {
   font-size: 1.2vw;
   color: #a28d69; 
   letter-spacing: .1em;
@@ -48,6 +61,27 @@ ul {
 }
 ul li a {
   text-decoration: none;
+}
+
+.content {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #ecece7;
+  padding: 5.5vw 0;
+}
+  
+.content_inner {
+  width: 72vw;
+  margin: 0 auto;
+}
+
+.content__title {
+  font-size: 3.2vw;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin: 0 0 7.5vw;
 }
 
 
@@ -67,7 +101,7 @@ ul li a {
   line-height: 1;
   letter-spacing: .2em;
   font-size: 2.25vw;
-  font-family: "Montserrat", sans-serif;
+ 
   color: rgb(249, 249, 249);
   opacity: .9;
 }

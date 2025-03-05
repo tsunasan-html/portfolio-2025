@@ -1,0 +1,61 @@
+
+  .works_listItem_eyecatch {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .works_listItem_eyecatch.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .works_listItem_textblock {
+    transition: opacity 1s ease;
+  }
+  
+  .works_listItem_eyecatch.fadein {
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .works_listItem_eyecatch.scrollin {
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  
+
+.works_list {
+    width: 72vw;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 5vw auto 0;
+}
+.works_listItem {
+    display: block;
+    padding-bottom: 7.5vw;
+}
+.works_listItem_eyecatch {
+    width: 34vw;
+}
+.works_listItem_textblock {
+    padding: 1.4vw 0 0 1em;
+}
+.works_title {
+    font-family: 'NotoSans SemiBold', sans-serif;
+    font-size: 1.3vw;
+    letter-spacing: .05em;
+    color: #a28d69;
+    margin: 0;
+}
+  
+
+
+  
+
+
+
+  

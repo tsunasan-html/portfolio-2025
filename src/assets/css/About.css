@@ -1,14 +1,24 @@
-.about {
-  width: 100vw;  
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  padding: 7.5vw 0 0;
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.about__inner {
-  width: 72vw;
-  margin: 0 auto;
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about__name-position {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about__name-position.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about__profile {
