@@ -5,6 +5,9 @@ import Contact from './component/Contact';
 import Works from './component/Works';
 import Home from './Home';
 import Footer from './component/Footer'; 
+import Works01 from './component/works/Works01';
+import Works02 from './component/works/Works02';
+
 import './App.css';
 
 function Header() {
@@ -28,7 +31,14 @@ function Header() {
     if (location.pathname === "/" && !isScrolled) {
       return "link-fff";
     }
-    if (location.pathname === "/about/" || location.pathname === "/works/" || location.pathname === "/contact/") {
+   
+    if (
+      location.pathname.startsWith("/about") ||
+      location.pathname.startsWith("/works") ||
+      location.pathname.startsWith("/contact") ||
+      location.pathname.startsWith("/works01") ||
+      location.pathname.startsWith("/works02")
+    ) {
       return "link-gold"; 
     }
     return isScrolled ? "link-gold" : "link-fff"; 
@@ -57,10 +67,17 @@ function Header() {
 }
 
 function AppContent() {
-  const location = useLocation(); 
+  const location = useLocation(); // ここで location を取得
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // ページ遷移時にスクロールをトップにする
+  }, [location.pathname]);
+
   const isAboutPage = location.pathname === "/about/";
   const isWorksPage = location.pathname === "/works/";
   const isContactPage = location.pathname === "/contact/";
+  const isWorks01Page = location.pathname === "/works01/";
+  const isWorks02Page = location.pathname === "/works02/";
 
   return (
     <>
@@ -70,6 +87,8 @@ function AppContent() {
         <Route path="/about/" element={<About />} />
         <Route path="/works/" element={<Works />} />
         <Route path="/contact/" element={<Contact />} />
+        <Route path="/works01/" element={<Works01 />} />
+        <Route path="/works02/" element={<Works02 />} />
       </Routes>
 
       {isAboutPage && <Footer />}

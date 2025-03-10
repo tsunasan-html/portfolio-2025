@@ -3,6 +3,7 @@ import About from './component/About';
 import Contact from './component/Contact';
 import Works from './component/Works';
 import Footer from './component/Footer'; 
+import Layout from "./component/Layout"; 
 
 const title = "TETSUHIRO MUNEYUKI";
 const subtitle = "IT IS A WEB DESIGNER'S PORTFOLIO.";
@@ -10,7 +11,7 @@ const subtitle = "IT IS A WEB DESIGNER'S PORTFOLIO.";
 function Home() {
 
   return (
-    <>
+    <Layout>
     <div className="main-visual">
       <div>
         <motion.h1 className="main-visual__title">
@@ -47,7 +48,7 @@ function Home() {
     <Works />
     <Contact />
     <Footer />
-    </>
+    </Layout>
   );
 }
 

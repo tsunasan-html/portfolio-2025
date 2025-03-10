@@ -51,6 +51,30 @@
     color: #a28d69;
     margin: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .works_list {
+    width: 86vw;
+    margin-bottom: 13vw;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5vw auto 7.5vw;
+  }
+  .wrapper--top .main_works_listItem {
+    padding-bottom: 13vw;
+  }
+  .works_listItem_eyecatch {
+    width: 100%;
+  }
+  .works_listItem_textblock {
+    padding: .7vw 0 0 0;
+  }
+  .works_title {
+    font-size: 3.2vw;
+  }
+}
   
 
 
